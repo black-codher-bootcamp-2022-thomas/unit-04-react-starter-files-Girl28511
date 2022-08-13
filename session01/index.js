@@ -50,4 +50,33 @@ function ClickButton() {
   .ATT
 
   
-  
+  // old approach for writing react 
+
+  const h1Element = react.createElement("H1", {style: {color:"red", backgroundColor: DDDD}}, "Hello this is a h1 element");
+  const pElement = react.createElement("p", {style: {color:"red", backgroundColor: DDDD}}, "Hello this is a p element");
+
+  //new approach 
+  const h1NewElement= <h1 style={{color:"red", backgroundColor: DDDD}}>Hello this is h1 element</h1>;
+
+  reactDom.render({h1Element, secondElement}, NAMEOFCREATEDoriginaltagINHTMLe.gdiv or in homework timeline);
+
+  // start react project at all times - npm run start 
+
+  // adding event listeners within react 
+
+  fucntion handleClick() {
+    alert("hey! someone clicked me ")
+  }
+
+    // old approach for writing react with an event listener - JSX - javascript extendable market language 
+
+    const h1Element = react.createElement("H1", {style: {color:"red", backgroundColor: DDDD}}, onClick: handleClick,},"Hello this is a h1 element");
+
+    //new approach  for writing react with an event listener
+    const h1NewElement= (
+    <h1 style={{color:"red", backgroundColor: DDDD}} onClick={handleClick}> 
+    Hello this is h1 element 
+    </h1>
+    );
+
+
