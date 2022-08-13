@@ -5,25 +5,13 @@ import { useState } from "react";
 import Book from "./components/Book";
 function App() {
   // const [mybookList] = useState(bookList);
-  // const books = bookList;
+  const books = bookData;
+  console.log(books[0])
   return (
     <>
-      <Book title="Normal People" author="Sally Rooney" />
-      <Book title="Girl Woman Other" author="Bernardine Evaristo"/>
+      {books.map((currentBook) => <Book title={currentBook.volumeInfo.title} author={currentBook.volumeInfo.authors} />)}
     </>
   );
-  // mybookList.map((bookItem) => <Book book={bookItem} />);
 }
 
 export default App;
-
-// const BookCounter = (props) => {
-
-//    return (
-//   <div className="booklist">
-//    <h1>Annabel's Books ({
-//    <button onClick={() =>  /button>
-//    <ul>......</ul>
-//    </div>
-//     );
-//   }
