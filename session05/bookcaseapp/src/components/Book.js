@@ -1,12 +1,12 @@
 import React from "react";
 
-const Book = (props) => {
+const Book = ({title,author,costs,fullInfo}) => {
   return (
     <div style={{ border: "4px solid pink" }}>
-      <h1>{`Title: ${props.title}`}</h1>
-      <p>{`Author: ${props.author}`}</p>
-      <p>{`Cost: ${props.costs}`}</p>
-      <p>{`Full description: ${props.fullInfo}`}</p>
+      <h1>{`Title: ${title}`}</h1>
+      <p>{`Author: ${author}`}</p>
+      <p>{`Cost: ${costs}`}</p>
+      <p>{`Full description: ${fullInfo}`}</p>
     </div>
   );
 };
