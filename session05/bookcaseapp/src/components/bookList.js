@@ -7,6 +7,7 @@ const BookList =(props) => {
       {props.fullbookdata.map((currentBook) => (
         <Book
           key={currentBook.id}
+          picture={currentBook.volumeInfo.imageLinks.thumbnail}
           title={currentBook.volumeInfo.title}
           author={currentBook.volumeInfo.authors}
           costs={currentBook.saleInfo.listPrice?.amount ?? "Price not available"}
