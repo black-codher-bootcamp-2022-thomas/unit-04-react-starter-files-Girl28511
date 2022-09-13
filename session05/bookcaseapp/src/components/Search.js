@@ -2,30 +2,14 @@ import React from "react";
 import { useState } from "react";
 
 const Search = (props) => {
+  const [keyword,setKeyword] = useState('');
   return (
     <div>
       <form>
-        <input
-          type="text"
-          value={keyword}
-          onChange={(event) => setKeyword(event.target.value)}
-        /> 
-         {/* <p style={{color:"red"}}><em>{keyword && 'Keywords Typed: ' + keyword}</em></p>  */}
-
-        {/* <input type="text" value={keyword} onChange ={(event)=>console.log(event.target.value)}/> */}
-        <button type="submit">Submit</button>
+      <input type="text" value={keyword} onChange={(e) =>setKeyword(e.target.value)}/>
       </form>
     </div>
   );
 };
 
 export default Search;
-
-// [new text]
-
-//    event = {
-//        ...
-//        target: {
-//            value: 'l' //the text data that is a input field
-//        }
-//    }
